@@ -9,6 +9,7 @@
 <script>
   export default {
     name: 'UsersPage',
+    layout: 'default',
     data() {
       return {
         id: ''

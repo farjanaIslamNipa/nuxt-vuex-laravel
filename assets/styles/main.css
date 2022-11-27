@@ -1,0 +1,7 @@
+.jumbotron{
+  border-radius: 0;
+  background-image: url('https://cdn.pixabay.com/photo/2017/05/09/03/46/alberta-2297204_960_720.jpg');
+  height: 500px;
+  background-size: cover;
+
+}
