@@ -10,6 +10,7 @@
           <div class="navbar-nav">
             <nuxt-link class="nav-link active" aria-current="page" to="/">Home</nuxt-link>
             <nuxt-link class="nav-link" to="/users">Users</nuxt-link>
+            <nuxt-link class="nav-link" to="/posts">Posts</nuxt-link>
           </div>
         </div>
       </div>

@@ -10,6 +10,11 @@
   export default {
     name: 'UsersPage',
     layout: 'default',
+    head(){
+    return {
+      title: 'User'
+    }
+  },
     data() {
       return {
         id: ''

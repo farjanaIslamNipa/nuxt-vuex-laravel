@@ -7,10 +7,14 @@
 <script>
   export default {
     name: 'SingleUser',
-
     validate({ params }) {
         return /^\d+$/.test(params.id);
-      }
+      },
+    head(){
+    return {
+      title: 'User'
+    }
+  },
   }
 
 </script>
