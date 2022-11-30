@@ -11,6 +11,7 @@
 
 <script>
 import axios from "axios";
+import {mapGetters} from 'vuex';
   export default {
     name: 'PostIndex',
     layout: 'default',
@@ -21,25 +22,16 @@ import axios from "axios";
   },
     data() {
       return {
-        posts: ''
+        allPosts: ''
       }
     },
-    async asyncData(){
-      let { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
-      return {posts: data}
+    computed: {
+      ...mapGetters(['posts'])
     },
-    // head: {
-    //   title: 'Posts'
-    // }
-    // mounted (  ) {
-    //   axios.get('https://jsonplaceholder.typicode.com/todos')
-    //   .then(response => {
-        
-    //     this.posts = response.data
-    //     console.log(this.posts, 'data')
-    //   })
-    //   .catch(error => {console.log(error)})
-    // },
+    async fetch({store}){
+      let { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      store.dispatch('setPosts', data)
+    }
   }
 </script>
 
